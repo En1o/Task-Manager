@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.task_list{
+    width: 100%;
+    min-height: 20px;
+    margin: 5px;
+    border: solid black 1px;
+}

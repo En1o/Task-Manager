@@ -25,11 +25,20 @@ const ulList = document.createElement('ul'),
       ulListElement = document.createElement('li'),
       spanListElement = document.createElement('span');
 
-function generateTaskCard(el){
+//Card
+function generateTaskCard(el){    
     spanListElement.innerText = taskCard.taskTitle
 }
 generateTaskCard(taskCard)
 
+
+//List
 ulListElement.insertAdjacentElement('afterbegin', spanListElement)
 ulList.insertAdjacentElement('afterbegin', ulListElement)
-document.body.insertAdjacentElement('afterbegin', ulList)
+
+function renderTaskList(list){
+    list.classList = 'task_list'
+    document.body.insertAdjacentElement('afterbegin', list)
+}
+
+renderTaskList(ulList);
