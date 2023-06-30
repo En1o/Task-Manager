@@ -1,5 +1,8 @@
-const taskBody = document.getElementsByName('body');
-console.log(taskBody)
-let div = document.createElement('div');
-div.innerText = 'Hello'
-document.body.append(div)
+let taskTitle = 'Title', taskText = 'Test text';
+
+const taskCard = {
+    taskTitle,
+    taskText,
+    isCompleted: false
+}
+
