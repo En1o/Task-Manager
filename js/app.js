@@ -50,3 +50,38 @@ function renderTaskList(list){
 renderTaskList(ulList);
 */
 
+const taskArray = [{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
+    isCompleted: false
+},
+{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
+    isCompleted: false
+},
+{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
+    isCompleted: false
+},
+{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
+    isCompleted: false
+}]
+
+
+const tasksList = document.querySelector('.task_list');
+
+const tasksListItem = `
+    <li class="task_list_item">
+        <span class="task_list_title">Test title JS</span>
+        <p class="task_list_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque reprehenderit, ex magnam nulla maiores nesciunt sint perspiciatis, ullam possimus odio accusantium soluta est corrupti eaque eveniet, expedita praesentium enim?</p>
+        <button class="task_list_btn list_btn_complite">Complite</button>
+        <button class="task_list_btn list_btn_edit">Edit</button>
+        <button class="task_list_btn list_btn_delete">DEL</button>
+    </li>
+`
+
+tasksList.insertAdjacentHTML('afterbegin', tasksListItem)
