@@ -1,4 +1,4 @@
-
+/* test
 // Task Kard
 const arrTasks = [];
 let taskTitle = 'Title', taskText = 'Test text';
@@ -30,6 +30,7 @@ function generateTaskCard(el){
     for(const key in el){
         if(key === taskTitle){
             spanListElement.innerText = el[key]
+            return spanListElement
         }
     }    
     
@@ -47,3 +48,5 @@ function renderTaskList(list){
 }
 
 renderTaskList(ulList);
+*/
+
