@@ -18,7 +18,7 @@ pushTask(taskCard)
 pushTask(taskCard)
 pushTask(taskCard)
 
-console.log(arrTasks)
+
 
 //Task List generate
 const ulList = document.createElement('ul'),
@@ -26,10 +26,15 @@ const ulList = document.createElement('ul'),
       spanListElement = document.createElement('span');
 
 //Card
-function generateTaskCard(el){    
-    spanListElement.innerText = taskCard.taskTitle
+function generateTaskCard(el){
+    for(const key in el){
+        if(key === taskTitle){
+            spanListElement.innerText = el[key]
+        }
+    }    
+    
 }
-generateTaskCard(taskCard)
+generateTaskCard(arrTasks)
 
 
 //List
