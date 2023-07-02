@@ -69,22 +69,42 @@ const taskArray = [{
     title: 'Test title',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
     isCompleted: false
+},
+{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quas perferendis? Odio totam exercitationem, labore possimus nulla recusandae similique, facere dignissimos minus eveniet suscipit facilis delectus eos eius quidem deleniti.',
+    isCompleted: false
+},{
+    title: 'Test title',
+    text: 'Lorem ipsum dolor sit ',
+    isCompleted: false
 }]
 
 const tasksList = document.querySelector('.task_list');
 let tasksListItem; 
 
-taskArray.forEach((task) => {
-    tasksListItem = `
-    <li class="task_list_item">
+
+function createTaskListItem(task){
+    const taskListElem = document.createElement('li')
+    taskListElem.classList = 'task_list_item'
+    taskListElem.innerHTML = `
         <span class="task_list_title">${task.title}</span>
         <p class="task_list_text">${task.text}</p>
-        <button class="task_list_btn list_btn_complite">Complite</button>
-        <button class="task_list_btn list_btn_edit">Edit</button>
-        <button class="task_list_btn list_btn_delete">DEL</button>
-    </li>
+        <span class = "task_list_btn_block">
+            <button class="task_list_btn list_btn_complite">Complite</button>
+            <button class="task_list_btn list_btn_edit">Edit</button>
+            <button class="task_list_btn list_btn_delete">DEL</button>
+        </span>        
 `
-    tasksList.insertAdjacentHTML('afterbegin', tasksListItem)
+
+    return taskListElem
+}
+
+
+taskArray.forEach((task) => {
+    tasksListItem = createTaskListItem(task)
+    tasksList.insertAdjacentElement('afterbegin', tasksListItem)
+    
 })
 
 

@@ -24,8 +24,8 @@ body{
 
 .task_list_item{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: column;
     margin: 0 0 10px 0;
     width: 32%;
     min-height: 100px;
@@ -47,6 +47,12 @@ body{
 .task_list_text{
     text-align: center;
     padding: 5px;
+}
+
+.task_list_btn_block{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
 }
 
 .task_list_btn{    
