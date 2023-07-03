@@ -100,32 +100,41 @@ function createTaskListItem(task){
     return taskListElem
 }
 
-
+/*
 taskArray.forEach((task) => {
     tasksListItem = createTaskListItem(task)
     tasksList.insertAdjacentElement('afterbegin', tasksListItem)
     
 })
-
+*/
 
 
 //delete card element (first version)
 const delElem = document.querySelectorAll('.list_btn_delete')
 
-console.log(delElem)
 
 delElem.forEach((el, i) => {
     el.addEventListener('click', () => {
         document.querySelectorAll('.task_list_item').forEach((card, j) =>{
             if(j == i){
-                card.className += ' none'
+                console.log(i)
+                deleteCard(i)
+                render(taskArray)
             }
         })
     })
 })
 
+function deleteCard(index){
+    taskArray.splice(index, 1)
+}
 
-
-
+function render(elem){
+    tasksList.innerHTML = ''
+    elem.forEach((task) => {
+        tasksListItem = createTaskListItem(task)
+        tasksList.insertAdjacentElement('afterbegin', tasksListItem)        
+    })
+}
 
 
