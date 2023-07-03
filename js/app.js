@@ -109,6 +109,23 @@ taskArray.forEach((task) => {
 
 
 
+//delete card element (first version)
+const delElem = document.querySelectorAll('.list_btn_delete')
+
+console.log(delElem)
+
+delElem.forEach((el, i) => {
+    el.addEventListener('click', () => {
+        document.querySelectorAll('.task_list_item').forEach((card, j) =>{
+            if(j == i){
+                card.className += ' none'
+            }
+        })
+    })
+})
+
+
+
 
 
 

@@ -80,3 +80,7 @@ body{
     color:white;
     background-color: red; 
 }
+
+.none{
+    display: none;
+}
